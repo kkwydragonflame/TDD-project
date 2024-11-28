@@ -1,0 +1,22 @@
+{
+  "name": "tdd-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkwydragonflame/TDD-project.git"
+  },
+  "author": "Johanna Eriksson <je224gs@student.lnu.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkwydragonflame/TDD-project/issues"
+  },
+  "homepage": "https://github.com/kkwydragonflame/TDD-project#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
