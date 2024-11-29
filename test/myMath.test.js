@@ -36,3 +36,9 @@ test('should return difference of two negative numbers', () => {
     const expected = 2
     expect(actual).toEqual(expected)
 })
+
+test('exception expected on invalid input', () => {
+    expect(() => {
+        sut.subtract('String', 5)
+    }).toThrow('Invalid: Input is not a number')
+})
