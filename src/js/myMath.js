@@ -8,6 +8,6 @@ export class MyMath {
     }
 
     subtract(a, b) {
-        return 6
+        return a - b
     }
 }
