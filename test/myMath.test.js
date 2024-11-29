@@ -14,3 +14,11 @@ test('should return 3', () => {
 
     expect(actual).toEqual(expected)
 })
+
+test('should return sum of two numbers', () => {
+    const actual = sut.add(7, 3)
+
+    const expected = 10
+
+    expect(actual).toEqual(expected)
+})
