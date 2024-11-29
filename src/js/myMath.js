@@ -1,17 +1,19 @@
 export class MyMath {
     add(a, b) {
-        if (typeof a !== 'number' || typeof b !== 'number') {
-            throw new Error('Invalid: Input is not a number')
-        }
+        this.#validateInput(a, b)
 
         return a + b
     }
 
     subtract(a, b) {
-        if (typeof a !== 'number' || typeof b !== 'number') {
+        this.#validateInput(a, b)
+
+        return a - b
+    }
+
+    #validateInput(input1, input2) {
+        if (typeof input1 !== 'number' || typeof input2 !== 'number') {
             throw new Error('Invalid: Input is not a number')
         }
-        
-        return a - b
     }
 }
