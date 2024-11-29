@@ -1,5 +1,5 @@
 export class MyMath {
     add(a, b) {
-        return 3
+        return a + b
     }
 }
