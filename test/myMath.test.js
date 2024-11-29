@@ -30,3 +30,9 @@ test('should return the difference of two numbers', () => {
     const expected = 6
     expect(actual).toEqual(expected)
 })
+
+test('should return difference of two negative numbers', () => {
+    const actual = sut.subtract(-5, -7)
+    const expected = 2
+    expect(actual).toEqual(expected)
+})
