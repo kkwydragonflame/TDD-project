@@ -7,24 +7,20 @@ beforeEach(() => {
     sut = new MyMath();
 })
 
-test('should return 3', () => {
-    const actual = sut.add(1, 2)
-
-    const expected = 3
-
-    expect(actual).toEqual(expected)
-})
-
-test('should return sum of two numbers', () => {
+test('should return sum of two positive numbers', () => {
     const actual = sut.add(7, 3)
 
-    const expected = 10
+    expect(actual).toEqual(10)
+})
 
-    expect(actual).toEqual(expected)
+test('should return sum of two negative numbers', () => {
+    const actual = sut.add(-7, -8)
+
+    expect(actual).toEqual(-15)
 })
 
 test('exception expected on invalid input', () => {
     expect(() => {
-        const actual = sut.add('String', 4)
+        sut.add('String', 4)
     }).toThrow('Invalid: Input is not a number')
 })
