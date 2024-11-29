@@ -22,3 +22,9 @@ test('should return sum of two numbers', () => {
 
     expect(actual).toEqual(expected)
 })
+
+test('exception expected on invalid input', () => {
+    expect(() => {
+        const actual = sut.add('String', 4)
+    }).toThrow('Invalid input')
+})
