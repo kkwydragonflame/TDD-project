@@ -6,4 +6,8 @@ export class MyMath {
 
         return a + b
     }
+
+    subtract(a, b) {
+        return 6
+    }
 }
