@@ -24,3 +24,9 @@ test('exception expected on invalid input', () => {
         sut.add('String', 4)
     }).toThrow('Invalid: Input is not a number')
 })
+
+test('should return the difference of two numbers', () => {
+    const actual = sut.subtract(10, 4)
+    const expected = 6
+    expect(actual).toEqual(expected)
+})
