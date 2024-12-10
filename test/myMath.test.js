@@ -27,18 +27,24 @@ test('exception expected on invalid input', () => {
 
 test('should return the difference of two numbers', () => {
     const actual = sut.subtract(10, 4)
-    const expected = 6
-    expect(actual).toEqual(expected)
+
+    expect(actual).toEqual(6)
 })
 
 test('should return difference of two negative numbers', () => {
     const actual = sut.subtract(-5, -7)
-    const expected = 2
-    expect(actual).toEqual(expected)
+
+    expect(actual).toEqual(2)
 })
 
 test('exception expected on invalid input', () => {
     expect(() => {
         sut.subtract('String', 5)
     }).toThrow('Invalid: Input is not a number')
+})
+
+test('should return sum of array containing two elements', () => {
+    const actual = sut.sumArray([1, 2])
+
+    expect(actual).toEqual(3)
 })
