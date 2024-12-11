@@ -18,6 +18,11 @@ export class MyMath {
     }
 
     sumArray(array) {
+        array.forEach(element => {
+            if (typeof element !== 'number') {
+                throw new Error('Invalid: Input is not a number')
+            }
+        })
         return array.reduce((accumulator, currentValue) => accumulator + currentValue)
     }
 }
