@@ -48,3 +48,9 @@ test('should return sum of array containing two elements', () => {
 
     expect(actual).toEqual(3)
 })
+
+test('should return sum of array containing three elements', () => {
+    const actual = sut.sumArray([1, 2, 3])
+
+    expect(actual).toEqual(6)
+})
