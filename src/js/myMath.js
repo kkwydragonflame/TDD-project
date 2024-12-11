@@ -18,6 +18,6 @@ export class MyMath {
     }
 
     sumArray(array) {
-        return 3
+        return array.reduce((accumulator, currentValue) => accumulator + currentValue)
     }
 }
