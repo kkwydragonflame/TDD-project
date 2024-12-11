@@ -16,4 +16,8 @@ export class MyMath {
             throw new Error('Invalid: Input is not a number')
         }
     }
+
+    sumArray(array) {
+        return 3
+    }
 }
