@@ -1,28 +1,30 @@
 export class MyMath {
     add(a, b) {
-        this.#validateInput(a, b)
+        for (const arg of arguments) {
+            this.#validateInput(arg)
+        }
 
         return a + b
     }
 
     subtract(a, b) {
-        this.#validateInput(a, b)
+        for (const arg of arguments) {
+            this.#validateInput(arg)
+        }
 
         return a - b
     }
 
-    #validateInput(input1, input2) {
-        if (typeof input1 !== 'number' || typeof input2 !== 'number') {
-            throw new Error('Invalid: Input is not a number')
-        }
-    }
-
     sumArray(array) {
         array.forEach(element => {
-            if (typeof element !== 'number') {
-                throw new Error('Invalid: Input is not a number')
-            }
+            this.#validateInput(element)
         })
         return array.reduce((accumulator, currentValue) => accumulator + currentValue)
+    }
+
+    #validateInput(input) {
+        if (typeof input !== 'number') {
+            throw new Error('Invalid: Input is not a number')
+        }
     }
 }
