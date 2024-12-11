@@ -54,3 +54,9 @@ test('should return sum of array containing three elements', () => {
 
     expect(actual).toEqual(6)
 })
+
+test('should throw exception on invalid element in array', () => {
+    expect(() => {
+        sut.sumArray([1, 'String', 3])
+    }).toThrow('Invalid: Input is not a number')
+})
