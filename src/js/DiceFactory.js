@@ -7,6 +7,8 @@ export class DiceFactory {
                 return new Die(6)
             case 'd12':
                 return new Die(12)
+            case 'd20':
+                return new Die(20)
             default:
                 throw new Error('Unknown die type')
         }
