@@ -12,3 +12,9 @@ test('should create a 6 sided die', () => {
 
     expect(die.sides).toBe(6)
 })
+
+test('should create a 12 sided die', () => {
+    const die = sut.createDice('d12')
+
+    expect(die.sides).toBe(12)
+})
