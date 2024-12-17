@@ -1,3 +1,6 @@
+import { ConsoleUI } from '../src/js/ConsoleUI.js'
+import { jest, test, expect, beforeEach } from '@jest/globals'
+
 let sut;
 
 beforeEach(() => {
