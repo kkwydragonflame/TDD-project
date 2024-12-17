@@ -8,21 +8,15 @@ beforeEach(() => {
 })
 
 test('should create a 6 sided die', () => {
-    const die = sut.createDice('d6')
-
-    expect(die.sides).toBe(6)
+    testDieCreation('d6', 6)
 })
 
 test('should create a 12 sided die', () => {
-    const die = sut.createDice('d12')
-
-    expect(die.sides).toBe(12)
+    testDieCreation('d12', 12)
 })
 
 test('should create a 20 sided die', () => {
-    const die = sut.createDice('d20')
-
-    expect(die.sides).toBe(20)
+    testDieCreation('d20', 20)
 })
 
 test('should throw error for unknown die type', () => {
@@ -30,3 +24,8 @@ test('should throw error for unknown die type', () => {
         const die = sut.createDice('d9')
     }).toThrow('Unknown die type')
 })
+
+function testDieCreation(type, sides) {
+    const die = sut.createDice(type)
+    expect(die.sides).toBe(sides)
+}
