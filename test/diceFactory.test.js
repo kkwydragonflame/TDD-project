@@ -18,3 +18,9 @@ test('should create a 12 sided die', () => {
 
     expect(die.sides).toBe(12)
 })
+
+test('should throw error for unknown die type', () => {
+    expect(() => {
+        const die = sut.createDice('d9')
+    }).toThrow('Unknown die type')
+})
