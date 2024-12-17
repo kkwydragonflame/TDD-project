@@ -1,4 +1,4 @@
-import { MyMath } from '../src/js/MyMath.js'
+import { MyMath } from '../src/js/myMath.js'
 import { test, expect, beforeEach } from '@jest/globals'
 
 let sut;
