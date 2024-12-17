@@ -5,6 +5,8 @@ export class DiceFactory {
         switch (type) {
             case 'd6':
                 return new Die(6)
+            case 'd12':
+                return new Die(12)
         }
     }
 }
