@@ -15,3 +15,10 @@ test('should throw exception if no DieFactory is provided', () => {
         sut = new DiceyGame(mockUI)
     }).toThrow('DieFactory is required')
 })
+
+test('should construct game successfully when both arguments are provided', () => {
+    const mockUI = {}
+    const mockDieFactory = {}
+    sut = new DiceyGame(mockUI, mockDieFactory)
+    expect(sut).toBeInstanceOf(DiceyGame)
+})
