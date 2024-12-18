@@ -8,3 +8,10 @@ test('should throw exception if no UserInterface is provided', () => {
         sut = new DiceyGame()
     }).toThrow('UserInterface is required')
 })
+
+test('should throw exception if no DieFactory is provided', () => {
+    const mockUI = {}
+    expect(() => {
+        sut = new DiceyGame(mockUI)
+    }).toThrow('DieFactory is required')
+})
