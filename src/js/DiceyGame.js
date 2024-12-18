@@ -13,5 +13,7 @@ export class DiceyGame {
         this.dieFactory = dieFactory
     }
 
-    setupGame() {}
+    setupGame() {
+        this.ui.welcome()
+    }
 }

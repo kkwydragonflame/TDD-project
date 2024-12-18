@@ -28,7 +28,8 @@ describe('DiceyGame constructor tests', () => {
 describe('Game setup tests', () => {
     beforeEach(() => {
         const mockUI = {
-            welcome: jest.fn()
+            welcome: jest.fn(),
+            menu: jest.fn()
         }
         const mockDieFactory = {}
         sut = new DiceyGame(mockUI, mockDieFactory)
@@ -43,7 +44,10 @@ describe('Game setup tests', () => {
         expect(sut.ui.welcome).toHaveBeenCalled()
     })
 
-    test.todo('should call menu method on UI')
+    test('should call menu method on UI', () => {
+        sut.setupGame()
+        expect(sut.ui.menu).toHaveBeenCalled()
+    })
 
     test.todo('should prompt user to choose a die type')
 
