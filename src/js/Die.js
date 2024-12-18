@@ -4,6 +4,6 @@ export class Die {
     }
 
     roll() {
-        return 5
+        return 4
     }
 }
