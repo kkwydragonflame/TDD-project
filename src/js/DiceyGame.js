@@ -12,4 +12,6 @@ export class DiceyGame {
         this.ui = ui
         this.dieFactory = dieFactory
     }
+
+    setupGame() {}
 }
