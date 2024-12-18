@@ -28,3 +28,5 @@ test('should print rules to console', () => {
 // test for printing score
 // test for printing menu
 // test for printing game options
+// test for prompting user for input
+// test for displaying error message
