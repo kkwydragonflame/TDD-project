@@ -15,5 +15,6 @@ export class DiceyGame {
 
     setupGame() {
         this.ui.welcome()
+        this.ui.menu()
     }
 }
