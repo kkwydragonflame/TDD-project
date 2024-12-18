@@ -4,6 +4,6 @@ export class Die {
     }
 
     roll() {
-        return 4
+        return Math.floor(Math.random() * this.sides) + 1
     }
 }
