@@ -7,6 +7,10 @@ beforeEach(() => {
     sut = new DiceFactory()
 })
 
+test('should create a 4 sided die', () => {
+    testDieCreation('d4', 4)
+})
+
 test('should create a 6 sided die', () => {
     testDieCreation('d6', 6)
 })
