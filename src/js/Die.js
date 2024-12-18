@@ -3,5 +3,7 @@ export class Die {
         this.sides = sides
     }
 
-    roll() {}
+    roll() {
+        return 5
+    }
 }
