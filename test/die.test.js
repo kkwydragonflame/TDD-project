@@ -10,8 +10,7 @@ describe('Testing 4 sided die', () => {
 
     test('roll should return a number between 1 and 4', () => {
         const result = sut.roll()
-        expect(result).toBeGreaterThanOrEqual(1)
-        expect(result).toBeLessThanOrEqual(4)
+        assertMaxMinValues(result, 1, 4)
     })
 })
 
@@ -22,8 +21,7 @@ describe('Testing 12 sided die', () => {
 
     test('roll should return a number between 1 and 12', () => {
         const result = sut.roll()
-        expect(result).toBeGreaterThanOrEqual(1)
-        expect(result).toBeLessThanOrEqual(12)
+        assertMaxMinValues(result, 1, 12)
     })
 })
 
@@ -34,7 +32,11 @@ describe('Testing 20 sided die', () => {
 
     test('roll should return a number between 1 and 20', () => {
         const result = sut.roll()
-        expect(result).toBeGreaterThanOrEqual(1)
-        expect(result).toBeLessThanOrEqual(20)
+        assertMaxMinValues(result, 1, 20)
     })
 })
+
+function assertMaxMinValues(result, min, max) {
+    expect(result).toBeGreaterThanOrEqual(min)
+    expect(result).toBeLessThanOrEqual(max)
+}
