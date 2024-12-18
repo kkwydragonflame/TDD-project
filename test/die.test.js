@@ -36,6 +36,18 @@ describe('Testing 20 sided die', () => {
     })
 })
 
+test('should produce varying results on multiple rolls', () => {
+    const diceSizes = [4, 6, 12, 20]
+    diceSizes.forEach(size => {
+        const sut = new Die(size)
+        const results = new Set()
+        for (let i = 0; i < 50; i++) {
+            results.add(sut.roll())
+        }
+        expect(results.size).toBeGreaterThan(1)
+    })
+})
+
 function assertMaxMinValues(result, min, max) {
     expect(result).toBeGreaterThanOrEqual(min)
     expect(result).toBeLessThanOrEqual(max)
